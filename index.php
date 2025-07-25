@@ -35,14 +35,14 @@
         <div class="col-md-9">
           <div class="contact-form">
             <div class="form-group">
-              <label class="control-label col-sm-2" for="fname">Nombre</label>
+              <label class="control-label col-sm-2" for="name">Nombre</label>
               <div class="col-sm-10">
                 <input
                   type="text"
                   class="form-control"
                   id="fname"
                   placeholder="Ingrese su Nombre"
-                  name="fname"
+                  name="name"
                 />
               </div>
             </div>
