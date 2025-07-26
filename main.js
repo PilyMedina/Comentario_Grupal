@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const comentario = comentarioInput.value.trim();
 
     if (nombre === "" || comentario === "") {
-      mostrarMensaje("⚠️ Por favor, completa ambos campos.", "error");
+      mostrarMensaje("Por favor, completa ambos campos.", "error");
       return;
     }
 
@@ -30,15 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const resultado = await respuesta.json();
 
       if (resultado.status === "ok") {
-        mostrarMensaje("✅ ¡Comentario enviado con éxito!", "exito");
+        mostrarMensaje("¡Comentario enviado con éxito!", "exito");
         comentarioInput.value = "";
         nombreInput.value = "";
       } else {
-        mostrarMensaje("❌ Hubo un error al enviar tu comentario.", "error");
+        mostrarMensaje("Hubo un error al enviar tu comentario.", "error");
       }
     } catch (error) {
       console.error("Error:", error);
-      mostrarMensaje("❌ Error de conexión con el servidor.", "error");
+      mostrarMensaje("Error de conexión con el servidor.", "error");
     }
   });
 
