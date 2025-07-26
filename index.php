@@ -1,5 +1,5 @@
 
-// Cargar comentarios desde el archivo JSON
+<!--Cargar comentarios desde el archivo JSON-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -66,7 +66,7 @@
             </form>
             <h3 class="mb-4">Comentarios recibidos</h3>
         
-          //logica php para mostrar comentarios
+          <!--logica php para mostrar comentarios-->
           </div>
           </div>
         </div>
