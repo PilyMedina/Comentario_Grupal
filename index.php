@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- FORMULARIO MODIFICADO: method y action -->
-    <form id="commentForm" action="guardar_comentario.php" method="POST">
+    <form id="commentForm">
       <div class="container contact">
         <div class="row">
           <div class="col-md-4">
@@ -32,11 +31,8 @@
           <div class="col-md-8">
             <div class="contact-form">
               <div class="form-group">
-                <label class="control-label col-sm-2" for="fname"
-                  >Nombre</label
-                >
+                <label class="control-label col-sm-2" for="fname">Nombre</label>
                 <div class="col-sm-10">
-                  <!-- AGREGADO name="nombre" -->
                   <input
                     type="text"
                     class="form-control"
@@ -49,11 +45,8 @@
               </div>
 
               <div class="form-group">
-                <label class="control-label col-sm-2" for="comment"
-                  >Comentario</label
-                >
+                <label class="control-label col-sm-2" for="comment">Comentario</label>
                 <div class="col-sm-10">
-                  <!-- AGREGADO name="comentario" -->
                   <textarea
                     class="form-control"
                     rows="5"
@@ -67,26 +60,22 @@
 
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <!-- Botón modificado con la clase btn-uiverse -->
                   <button type="submit" class="btn-uiverse">Enviar</button>
                 </div>
               </div>
+              <div id="mensaje" class="mt-3"></div>
+            </div>
+          
+            <h3 class="mb-4 comments-section-heading">Comentarios recibidos:</h3>
+            
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" id="btnBorrar" class="btn-uiverse">
+              🗑️ Borrar todos
+            </button>
+
             </div>
 
-            <h3 class="mb-4 comments-section-heading">Comentarios recibidos:</h3>
-
-            <!-- AGREGADO: Mostrar comentarios desde PHP -->
-            <div class="comentarios">
-              <?php
-              if (file_exists("comentarios.txt")) {
-                  $comentarios = file("comentarios.txt");
-                  foreach ($comentarios as $linea) {
-                      echo "<p>" . htmlspecialchars($linea) . "</p>";
-                  }
-              } else {
-                  echo "<p>No hay comentarios aún.</p>";
-              }
-              ?>
+            <div class="comentarios" id="contenedorComentarios">
             </div>
 
           </div>
